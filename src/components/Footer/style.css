@@ -1,0 +1,52 @@
+footer {
+  display: flex;
+
+  position: fixed;
+  bottom: 0;
+
+  height: 17vh;
+  width: 100vw;
+  padding: 3vh 1.3vw;
+
+  border-top: 1px solid #6a6363;
+
+  background: linear-gradient(180deg, #383535 0%, rgba(133, 130, 130, 0) 100%);
+}
+
+.author-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.music-name {
+  font-size: 22px;
+}
+
+.author-name {
+  font-size: 14px;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  gap: 30px;
+}
+
+nav img {
+  height: 45px;
+  width: 45px;
+}
+
+.play-pause {
+  height: 61px;
+  width: 61px;
+}
