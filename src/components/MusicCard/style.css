@@ -1,0 +1,32 @@
+a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 200px;
+  height: 360px;
+
+  cursor: pointer;
+}
+
+.music-cover {
+  height: 200px;
+  width: 200px;
+}
+
+.music-title {
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.music-description {
+  text-align: justify;
+  font-family: Rubik;
+  font-size: 12px;
+  font-weight: 400;
+
+  color: #ccc3c3;
+}
