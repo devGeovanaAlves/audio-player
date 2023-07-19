@@ -13,7 +13,9 @@ footer {
   background: linear-gradient(180deg, #383535 0%, rgba(133, 130, 130, 0) 100%);
 }
 
-.author-container {
+.data-music-container {
+  width: 9%;
+
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -33,15 +35,24 @@ footer {
 }
 
 .controls-container {
+  width: 91%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
 
-  gap: 30px;
+  gap: 20px;
 }
 
-nav img {
+.normal-button {
   height: 45px;
   width: 45px;
 }
@@ -49,4 +60,23 @@ nav img {
 .play-pause {
   height: 61px;
   width: 61px;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.time {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #ccc3c3;
+}
+
+input {
+  width: 560px;
+  height: 5px;
 }
