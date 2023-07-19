@@ -8,7 +8,7 @@ footer {
   width: 100vw;
   padding: 3vh 1.3vw;
 
-  border-top: 1px solid #6a6363;
+  border-top: 2px solid rgba(0, 0, 0, 0.21);
 
   background: linear-gradient(180deg, #383535 0%, rgba(133, 130, 130, 0) 100%);
 }
