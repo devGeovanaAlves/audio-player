@@ -3,20 +3,20 @@ a {
   flex-direction: column;
   gap: 10px;
 
-  width: 200px;
+  width: 220px;
   height: 360px;
 
   cursor: pointer;
 }
 
 .music-cover {
-  height: 200px;
-  width: 200px;
+  height: 220px;
+  width: 220px;
 }
 
 .music-title {
   font-family: Rubik;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
 
   color: #fff;
@@ -25,7 +25,7 @@ a {
 .music-description {
   text-align: justify;
   font-family: Rubik;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
 
   color: #ccc3c3;

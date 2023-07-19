@@ -1,10 +1,7 @@
 footer {
   display: flex;
 
-  position: fixed;
-  bottom: 0;
-
-  height: 17vh;
+  height: 15vh;
   width: 100vw;
   padding: 3vh 1.3vw;
 
@@ -39,27 +36,27 @@ footer {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
 }
 
 .buttons-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
 
   gap: 20px;
 }
 
 .normal-button {
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
 }
 
 .play-pause {
-  height: 61px;
-  width: 61px;
+  height: 50px;
+  width: 50px;
 }
 
 .progress-bar-container {
@@ -78,5 +75,5 @@ footer {
 
 input {
   width: 560px;
-  height: 5px;
+  height: 4px;
 }

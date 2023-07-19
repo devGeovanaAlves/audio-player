@@ -1,17 +1,13 @@
 main {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 
-  position: fixed;
-  bottom: 22vh;
-
-  width: 83vw;
   height: 55vh;
 }
 
 main h1 {
-  width: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #6a6363;
 
   font-family: Roboto;
@@ -26,4 +22,6 @@ main h1 {
   justify-content: center;
   align-items: center;
   gap: 30px;
+
+  margin-top: 10px;
 }
