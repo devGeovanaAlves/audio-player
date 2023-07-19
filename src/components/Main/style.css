@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  bottom: 22vh;
+
+  width: 83vw;
+  height: 55vh;
+}
+
+main h1 {
+  width: 100%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #6a6363;
+
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.musics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
