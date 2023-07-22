@@ -7,15 +7,29 @@ import AudioData from "../AudioData";
 
 function Footer() {
   const [currentMusic, setCurrentMusic] = useState(musics[0]);
+  const [duration, setDuration] = useState(0);
+  const [progressTime, setProgressTime] = useState(0);
+
   const audioRef = useRef();
+  const progressBarRef = useRef();
 
   return (
     <footer>
-      <AudioData currentMusic={currentMusic} audioRef={audioRef} />
+      <AudioData
+        currentMusic={currentMusic}
+        audioRef={audioRef}
+        setDuration={setDuration}
+        progressBarRef={progressBarRef}
+      />
 
       <div className="controls-container">
         <Controls audioRef={audioRef} />
-        <ProgressBar />
+        <ProgressBar
+          progressBarRef={progressBarRef}
+          audioRef={audioRef}
+          duration={setDuration}
+          timeProgress={progressTime}
+        />
       </div>
     </footer>
   );
