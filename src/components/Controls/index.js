@@ -9,6 +9,10 @@ import stopIcon from "../../assets/stop.svg";
 function Controls() {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const togglePlayPause = () => {
+    setIsPlaying((statePrev) => !statePrev);
+  };
+
   return (
     <div className="buttons-container">
       <button className="normal-button">
@@ -23,7 +27,7 @@ function Controls() {
         />
       </button>
 
-      <button className="play-pause">
+      <button className="play-pause" onClick={togglePlayPause}>
         {isPlaying ? (
           <img className="play-pause" src={pauseIcon} alt="Botão de pause" />
         ) : (
