@@ -1,0 +1,27 @@
+.controls-container {
+  width: 91%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.normal-button {
+  height: 40px;
+  width: 40px;
+}
+
+.play-pause {
+  height: 50px;
+  width: 50px;
+}
