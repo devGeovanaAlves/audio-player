@@ -1,11 +1,21 @@
 import "./style.css";
 
-function ProgressBar() {
+function ProgressBar({ progressBarRef, audioRef, duration, progressTime }) {
+  const onProgressChange = () => {
+    audioRef.current.currentTime = progressBarRef.current.value;
+  };
+
   return (
     <div className="progress-bar-container">
-      <span className="time current">0.00</span>
-      <input type="range" />
-      <span className="time">3.34</span>
+      <span className="time current">{progressTime}</span>
+      <input
+        className="slider"
+        type="range"
+        ref={progressBarRef}
+        defaultValue="0"
+        onChange={onProgressChange}
+      />
+      <span className="time">{duration} </span>
     </div>
   );
 }
