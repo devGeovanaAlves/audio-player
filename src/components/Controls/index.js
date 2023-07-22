@@ -1,17 +1,25 @@
 import "./style.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import nextIcon from "../../assets/next.svg";
 import pauseIcon from "../../assets/pause.svg";
 import playIcon from "../../assets/play.svg";
 import previousIcon from "../../assets/previous.svg";
 import stopIcon from "../../assets/stop.svg";
 
-function Controls() {
-  const [isPlaying, setIsPlaying] = useState(false);
+function Controls({ audioRef }) {
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
   const togglePlayPause = () => {
-    setIsPlaying((statePrev) => !statePrev);
+    setIsMusicPlaying((statePrev) => !statePrev);
   };
+
+  useEffect(() => {
+    if (isMusicPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isMusicPlaying, audioRef]);
 
   return (
     <div className="buttons-container">
@@ -28,7 +36,7 @@ function Controls() {
       </button>
 
       <button className="play-pause" onClick={togglePlayPause}>
-        {isPlaying ? (
+        {isMusicPlaying ? (
           <img className="play-pause" src={pauseIcon} alt="Botão de pause" />
         ) : (
           <img className="play-pause" src={playIcon} alt="Botão de play" />
