@@ -5,9 +5,25 @@ function ProgressBar({ progressBarRef, audioRef, duration, progressTime }) {
     audioRef.current.currentTime = progressBarRef.current.value;
   };
 
+  const convertToString = (time) => {
+    if (time && !isNaN(time)) {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time - minutes * 60);
+
+      const timeString =
+        minutes.toString().padStart(2, "0") +
+        "." +
+        seconds.toString().padStart(2, 0);
+
+      return timeString;
+    }
+
+    return "--.--";
+  };
+
   return (
     <div className="progress-bar-container">
-      <span className="time current">{progressTime}</span>
+      <span className="time current">{convertToString(progressTime)}</span>
       <input
         className="slider"
         type="range"
@@ -15,7 +31,7 @@ function ProgressBar({ progressBarRef, audioRef, duration, progressTime }) {
         defaultValue="0"
         onChange={onProgressChange}
       />
-      <span className="time">{duration} </span>
+      <span className="time">{convertToString(duration)} </span>
     </div>
   );
 }
