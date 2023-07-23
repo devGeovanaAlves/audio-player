@@ -6,8 +6,20 @@ import playIcon from "../../assets/play.svg";
 import previousIcon from "../../assets/previous.svg";
 import stopIcon from "../../assets/stop.svg";
 
-function Controls({ audioRef }) {
+function Controls({
+  audioRef,
+  musics,
+  musicIndex,
+  setMusicIndex,
+  setCurrentMusic,
+}) {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+
+  const goToNext = () => {
+    const nextIndex = musicIndex >= musics.length - 1 ? 0 : musicIndex + 1;
+    setMusicIndex(nextIndex);
+    setCurrentMusic(musics[nextIndex]);
+  };
 
   const togglePlayPause = () => {
     setIsMusicPlaying((statePrev) => !statePrev);
@@ -43,7 +55,7 @@ function Controls({ audioRef }) {
         )}
       </button>
 
-      <button className="normal-button">
+      <button className="normal-button" onClick={goToNext}>
         <img className="normal-button" src={nextIcon} alt="Botão de próximo" />
       </button>
     </div>
