@@ -14,19 +14,11 @@ function ProgressBar({ progressBarRef, audioRef, duration, progressTime }) {
   };
 
   const convertToString = (time) => {
-    if (time && !isNaN(time)) {
-      const minutes = Math.floor(time / 60);
-      const seconds = Math.floor(time - minutes * 60);
-
-      const timeString =
-        minutes.toString().padStart(2, "0") +
-        "." +
-        seconds.toString().padStart(2, 0);
-
-      return timeString;
-    }
-
-    return "--.--";
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes.toString().padStart(2, "0")}:${seconds
+      .toString()
+      .padStart(2, "0")}`;
   };
 
   return (
