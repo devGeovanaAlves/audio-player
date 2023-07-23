@@ -1,6 +1,14 @@
 import "./style.css";
+import { useEffect } from "react";
 
 function ProgressBar({ progressBarRef, audioRef, duration, progressTime }) {
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = progressTime;
+      progressBarRef.current.value = progressTime;
+    }
+  }, [progressTime]);
+
   const onProgressChange = () => {
     audioRef.current.currentTime = progressBarRef.current.value;
   };
@@ -27,8 +35,10 @@ function ProgressBar({ progressBarRef, audioRef, duration, progressTime }) {
       <input
         className="slider"
         type="range"
+        min="0"
+        max={duration}
         ref={progressBarRef}
-        defaultValue="0"
+        defaultValue={progressTime}
         onChange={onProgressChange}
       />
       <span className="time">{convertToString(duration)} </span>
