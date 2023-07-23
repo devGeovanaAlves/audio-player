@@ -31,6 +31,10 @@ function Controls({
     setIsMusicPlaying((statePrev) => !statePrev);
   };
 
+  const toggleStop = () => {
+    audioRef.current.currentTime = 0;
+  };
+
   useEffect(() => {
     if (isMusicPlaying) {
       audioRef.current.play();
@@ -41,7 +45,7 @@ function Controls({
 
   return (
     <div className="buttons-container">
-      <button className="normal-button">
+      <button className="normal-button" onClick={toggleStop}>
         <img className="normal-button" src={stopIcon} alt="Botão de stop" />
       </button>
 
