@@ -6,7 +6,9 @@ import ProgressBar from "../ProgressBar";
 import AudioData from "../AudioData";
 
 function Footer() {
-  const [currentMusic, setCurrentMusic] = useState(musics[0]);
+  const [musicIndex, setMusicIndex] = useState(0);
+  const [currentMusic, setCurrentMusic] = useState(musics[musicIndex]);
+
   const [duration, setDuration] = useState(0);
   const [progressTime, setProgressTime] = useState(0);
 
@@ -23,12 +25,18 @@ function Footer() {
       />
 
       <div className="controls-container">
-        <Controls audioRef={audioRef} />
+        <Controls
+          audioRef={audioRef}
+          musics={musics}
+          musicIndex={musicIndex}
+          setMusicIndex={setMusicIndex}
+          setCurrentMusic={setCurrentMusic}
+        />
         <ProgressBar
           progressBarRef={progressBarRef}
           audioRef={audioRef}
-          duration={setDuration}
-          timeProgress={progressTime}
+          duration={duration}
+          progressTime={progressTime}
         />
       </div>
     </footer>
