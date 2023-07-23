@@ -21,6 +21,12 @@ function Controls({
     setCurrentMusic(musics[nextIndex]);
   };
 
+  const backToPrevious = () => {
+    const prevIndex = musicIndex === 0 ? musics.length - 1 : musicIndex - 1;
+    setMusicIndex(prevIndex);
+    setCurrentMusic(musics[prevIndex]);
+  };
+
   const togglePlayPause = () => {
     setIsMusicPlaying((statePrev) => !statePrev);
   };
@@ -39,7 +45,7 @@ function Controls({
         <img className="normal-button" src={stopIcon} alt="Botão de stop" />
       </button>
 
-      <button className="normal-button">
+      <button className="normal-button" onClick={backToPrevious}>
         <img
           className="normal-button"
           src={previousIcon}
