@@ -1,10 +1,21 @@
 import "./style.css";
+import { useEffect } from "react";
 
-function AudioData({ currentMusic, audioRef, setDuration, progressBarRef }) {
-  const onLoadedMetadata = () => {
+function AudioData({
+  currentMusic,
+  audioRef,
+  setDuration,
+  progressBarRef,
+  setCurrentTime,
+}) {
+  const handleLoadedMetadata = () => {
     const timeSeconds = audioRef.current.duration;
     setDuration(timeSeconds);
     progressBarRef.current.max = timeSeconds;
+  };
+
+  const handleTimeUpdate = () => {
+    setCurrentTime(audioRef.current.currentTime);
   };
 
   return (
@@ -12,7 +23,8 @@ function AudioData({ currentMusic, audioRef, setDuration, progressBarRef }) {
       <audio
         src={currentMusic.url}
         ref={audioRef}
-        onLoadedMetadata={onLoadedMetadata}
+        onLoadedMetadata={handleLoadedMetadata}
+        onTimeUpdate={handleTimeUpdate}
       ></audio>
       <h1 className="music-name">{currentMusic.title}</h1>
       <span className="author-name">{currentMusic.artist}</span>

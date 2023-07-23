@@ -8,6 +8,7 @@ import AudioData from "../AudioData";
 function Footer() {
   const [musicIndex, setMusicIndex] = useState(0);
   const [currentMusic, setCurrentMusic] = useState(musics[musicIndex]);
+  const [currentTime, setCurrentTime] = useState(0);
 
   const [duration, setDuration] = useState(0);
   const [progressTime, setProgressTime] = useState(0);
@@ -22,6 +23,7 @@ function Footer() {
         audioRef={audioRef}
         setDuration={setDuration}
         progressBarRef={progressBarRef}
+        setCurrentTime={setCurrentTime}
       />
 
       <div className="controls-container">
@@ -36,7 +38,7 @@ function Footer() {
           progressBarRef={progressBarRef}
           audioRef={audioRef}
           duration={duration}
-          progressTime={progressTime}
+          progressTime={currentTime}
         />
       </div>
     </footer>
