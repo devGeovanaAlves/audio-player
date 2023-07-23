@@ -19,12 +19,14 @@ function Controls({
     const nextIndex = musicIndex >= musics.length - 1 ? 0 : musicIndex + 1;
     setMusicIndex(nextIndex);
     setCurrentMusic(musics[nextIndex]);
+    togglePlayPause();
   };
 
   const backToPrevious = () => {
     const prevIndex = musicIndex === 0 ? musics.length - 1 : musicIndex - 1;
     setMusicIndex(prevIndex);
     setCurrentMusic(musics[prevIndex]);
+    togglePlayPause();
   };
 
   const togglePlayPause = () => {
@@ -57,7 +59,7 @@ function Controls({
         />
       </button>
 
-      <button className="play-pause" onClick={togglePlayPause}>
+      <button id="play-pause" onClick={togglePlayPause}>
         {isMusicPlaying ? (
           <img className="play-pause" src={pauseIcon} alt="Botão de pause" />
         ) : (
