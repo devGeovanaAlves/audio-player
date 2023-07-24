@@ -1,47 +1,56 @@
-![](https://i.imgur.com/xG74tOh.png)
 
-# Aula prática de React - Cubos Player
+# AudioPlayer
 
-Essa aula prática consiste em desenvolver um player de músicas, para isso você usará o layout figma que se encontra nesse [link](https://www.figma.com/file/2RRh9uG0Mjj6p4p6ekVnNp/Cubos-Player?node-id=0%3A1).
+Este foi um projeto avaliativo desenvolvido no curso de Desenvolvimento de Software na CubosAcademy no *Módulo de Introdução ao React*.
 
-
-Caso você queira importar o arquivo do figma no seu computador, ele está nessa pasta com o nome `Cubos Player.fig`
+O **AudioPlayer** é um aplicativo de música que permite reproduzir músicas de uma maneira simples e agradável.
 
 
-Os detalhes do que você precisará desenvolver está nos vídeos introdutórios da aula...
+## Tecnologia utilizada
 
 
-... mas o layout que você irá encontrar no figma é esse:
-
-![](https://i.imgur.com/kU1nrcS.png)
-
----
-### Dicas
-Não sabe por onde começar? Que tal começar olhando o que já existe dentro do projeto, após isso pense no projeto final e defina pequenas tarefas para chegar a esse resultado.
-
-No exercício será necessário:
-
-- Criar e manipular estado
-- Criar e manipular referências
-- Utilizar eventos de clique
-- Passar propriedades
-- Importar imagens
-- Executar uma ação várias vezes de tempo em tempo
-- Importar dados do arquivo json
-- Procurar itens
+- **ReactJS**: biblioteca JavaScript para construir interfaces.
 
 
-As duas aulas anteriores são as mais importantes para você conseguir desenvolver esse projeto.
+## Pré-requisitos
+
+Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 
----
+- Node.js: [Baixe aqui](https://nodejs.org/pt-br/download/current)
 
-Preencha a checklist para fazer os exercícios:
+- Git:  [Baixe aqui](https://git-scm.com/downloads)
 
--   [ ] Fazer o fork do repositório para sua conta
--   [ ] Executar `git clone` do seu fork no terminal para clonar o repositório, ou clonar de outra maneira
--   [ ] Após fazer e commitar todos os exercícios fazer o `git push` para seu fork
--   [ ] Copiar a url do seu fork e enviar na plataforma
 
-###### tags: `módulo 3` `front-end` `React`
+
+## Configuração
+
+* Clone o repositório;
+
+
+```bash
+  git clone git@github.com:devGeovanaAlves/audio-player.git
+```
+
+- Navegue até o diretório do projeto;
+
+```bash
+    cd audio-player
+```
+
+- Instale audio-player com npm;
+
+```bash
+  npm install
+```
+
+- Execute o projeto;
+
+```bash
+  npm run start
+```
+    
+## Demonstração
+
+![Imgur](https://i.imgur.com/taWBZjl.png)
 
